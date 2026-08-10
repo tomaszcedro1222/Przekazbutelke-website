@@ -1,1 +1,43 @@
-<!doctype html><html lang="pl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Usuń konto – Przekaż Butelkę</title><meta name="theme-color" content="#070b12"><link rel="stylesheet" href="/assets/css/styles.css"></head><body><header class="site-header"><div class="container nav"><a class="brand" href="/"><img src="/assets/images/app-icon.png" alt=""><span>Przekaż Butelkę</span></a><nav class="nav-links"><a href="/">Strona główna</a><a href="/wsparcie/">Wsparcie</a></nav></div></header><main><section class="legal-hero"><div class="container"><div class="eyebrow">Przekaż Butelkę</div><h1>Usuń konto</h1><p>Tutaj możesz rozpocząć proces usunięcia konta i danych.</p></div></section><section class="legal"><div class="container"><div class="legal-content"><h2>Jak usunąć konto</h2><p>Możesz rozpocząć proces usunięcia z poziomu aplikacji. Jeśli nie masz do niej dostępu, napisz na:</p><div class="contact-box"><a href="mailto:kontakt@przekazbutelke.pl?subject=Usunięcie%20konta%20Przekaż%20Butelkę">kontakt@przekazbutelke.pl</a></div><h2>Co podać</h2><p>Podaj adres e-mail powiązany z kontem i poproś o jego usunięcie.</p><h2>Co zostanie usunięte</h2><p>Dane konta i dane powiązane z użytkownikiem zostaną usunięte lub zanonimizowane, z wyjątkiem informacji wymaganych prawem lub potrzebnych dla bezpieczeństwa systemu.</p></div></div></section></main><footer class="footer"><div class="container footer-bottom"><span>© Przekaż Butelkę</span><span><a href="/">przekazbutelke.pl</a></span></div></footer></body></html>
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Instrukcja i formularz usunięcia konta Przekaż Butelkę.">
+  <title>Usuń konto – Przekaż Butelkę</title>
+  <meta name="theme-color" content="#070b12">
+  <link rel="canonical" href="https://przekazbutelke.pl/usun-konto/">
+  <link rel="stylesheet" href="/assets/css/styles.css">
+  <style>.legal-content form{display:grid;gap:10px;margin:24px 0}.legal-content input,.legal-content textarea{width:100%;padding:13px 14px;border:1px solid rgba(255,255,255,.14);border-radius:12px;background:#0b1018;color:#fff;font:inherit}.legal-content button{border:0;cursor:pointer;justify-self:start}.legal-content .card{margin:18px 0;padding:16px;border-radius:14px;background:#10243b}</style>
+</head>
+<body>
+<header class="site-header"><div class="container nav"><a class="brand" href="/"><img src="/assets/images/app-icon.png" alt="Logo Przekaż Butelkę"><span>Przekaż Butelkę</span></a><nav class="nav-links" aria-label="Nawigacja"><a href="/">Strona główna</a><a href="/wsparcie/">Wsparcie</a></nav></div></header>
+<main>
+  <section class="legal-hero"><div class="container"><div class="eyebrow">Kontrola nad danymi</div><h1>Usuń konto</h1><p>Konto i powiązane dane możesz usunąć w aplikacji albo złożyć żądanie przez WWW.</p></div></section>
+  <section class="legal"><div class="container"><div class="legal-content">
+    <h2>Najszybciej w aplikacji</h2>
+    <p>Zaloguj się i wybierz: <strong>Ustawienia i konto → Usuń konto i dane</strong>. Po potwierdzeniu aplikacja rozpocznie trwałe usuwanie konta, profilu, reputacji, punktów, zdjęć i danych instalacji.</p>
+    <h2>Nie masz dostępu do aplikacji?</h2>
+    <p>Skorzystaj z bezpiecznego formularza. Podaj adres e-mail powiązany z kontem. Dla ochrony użytkownika możemy poprosić o potwierdzenie tożsamości właściciela konta.</p>
+    <div id="requestSent" class="card" hidden><strong>Żądanie zostało zapisane.</strong><p>Skontaktujemy się, jeśli będzie potrzebne dodatkowe potwierdzenie.</p></div>
+    <div id="requestError" class="card" hidden><strong>Nie udało się wysłać żądania.</strong><p>Sprawdź adres e-mail i spróbuj ponownie albo napisz na przekazbutelke.cedrotomasz@gmail.com.</p></div>
+    <form method="post" action="https://bpqlfqqjvocusqqhbkjx.supabase.co/functions/v1/legal/delete-account">
+      <label for="email"><strong>Adres e-mail powiązany z kontem</strong></label>
+      <input id="email" name="email" type="email" autocomplete="email" maxlength="254" required>
+      <label for="message"><strong>Dodatkowa informacja (opcjonalnie)</strong></label>
+      <textarea id="message" name="message" maxlength="2000" rows="4"></textarea>
+      <input name="company" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-10000px">
+      <button class="btn btn-primary" type="submit">Wyślij żądanie usunięcia</button>
+    </form>
+    <h2>Co może pozostać?</h2>
+    <p>Wyłącznie informacje, których przechowywanie jest wymagane prawem albo niezbędne do rozpatrzenia trwającego nadużycia, roszczenia lub samego żądania. Szczegóły opisuje <a href="/polityka-prywatnosci/">Polityka prywatności</a>.</p>
+  </div></div></section>
+</main>
+<footer class="footer"><div class="container footer-bottom"><span>© Przekaż Butelkę</span><span><a href="/polityka-prywatnosci/">Polityka prywatności</a></span></div></footer>
+<script>
+  const result = new URLSearchParams(location.search);
+  if (result.get('sent') === '1') document.getElementById('requestSent').hidden = false;
+  if (result.has('error')) document.getElementById('requestError').hidden = false;
+</script>
+</body>
+</html>
