@@ -206,8 +206,10 @@ h2 { margin: 0; font-size: clamp(36px, 4.5vw, 58px); line-height: 1.04; }
 .patrons-section { background: linear-gradient(180deg, var(--blue-pale), #fff); }
 .patron-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
 .patron-grid > div { min-height: 150px; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 25px; background: rgba(255,255,255,.75); border: 1px dashed #9bc3eb; border-radius: 22px; text-align: center; }
+.patron-grid > .patron-filled { background: #fff; border-color: #d8e7f6; border-style: solid; }
 .patron-grid span { color: var(--blue); font-size: 12px; font-weight: 900; letter-spacing: .1em; text-transform: uppercase; }
 .patron-grid strong { margin-top: 8px; color: var(--muted); }
+.patron-grid img { display: block; width: min(100%, 300px); height: auto; margin-top: 15px; object-fit: contain; }
 .patron-cta { display: flex; align-items: center; justify-content: space-between; gap: 25px; margin-top: 20px; padding: 25px 28px; background: var(--ink); border-radius: 24px; }
 .patron-cta strong { color: #fff; font-size: 22px; }
 .patron-cta p { margin: 4px 0 0; color: #a9bed3; }
