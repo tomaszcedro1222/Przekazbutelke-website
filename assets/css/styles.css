@@ -92,10 +92,10 @@ h1 { margin: 18px 0 22px; font-size: clamp(50px, 6vw, 78px); line-height: .98; }
 .hero-card-main > strong { position: relative; z-index: 1; display: block; font-size: clamp(31px, 3.4vw, 46px); line-height: 1.02; letter-spacing: -.045em; }
 .hero-card-main .phone-shell { position: absolute; width: min(260px, 55%); right: 40px; bottom: -248px; padding: 8px; background: var(--ink); border-radius: 38px; box-shadow: 0 24px 54px rgba(0,0,0,.26); }
 .hero-card-main .phone-shell img { width: 100%; border-radius: 31px; }
-.hero-card-side { position: absolute; left: 0; bottom: 38px; width: 255px; padding: 20px; background: #fff; border: 1px solid var(--line); color: var(--ink); }
+.hero-card-side { position: absolute; left: 0; bottom: 38px; width: 365px; padding: 15px 20px; background: #fff; border: 1px solid var(--line); color: var(--ink); }
 .hero-card-side .status-dot { width: 12px; height: 12px; display: inline-block; margin-right: 7px; border-radius: 50%; background: var(--green); box-shadow: 0 0 0 6px rgba(22, 167, 101, .1); }
-.hero-card-side strong { font-size: 18px; }
-.hero-card-side small { display: block; margin-top: 8px; color: var(--muted); line-height: 1.35; }
+.hero-card-side strong { font-size: 18px; white-space: nowrap; }
+.hero-card-side small { display: block; margin-top: 5px; color: var(--muted); line-height: 1.35; white-space: nowrap; }
 .benefit-strip { position: relative; z-index: 2; display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 25px; }
 .benefit-strip span { min-height: 84px; display: flex; align-items: center; justify-content: center; padding: 18px; color: var(--blue-dark); background: rgba(231, 242, 255, .84); border: 1px solid #d7eafe; border-radius: 24px; font-size: 17px; font-weight: 820; text-align: center; line-height: 1.2; }
 
@@ -113,6 +113,7 @@ h2 { margin: 0; font-size: clamp(36px, 4.5vw, 58px); line-height: 1.04; }
 .step-number { position: relative; z-index: 1; width: 58px; height: 58px; display: inline-flex; align-items: center; justify-content: center; margin: -1px auto 18px; border-radius: 50%; background: var(--blue); color: #fff; font-size: 21px; font-weight: 900; box-shadow: 0 10px 22px rgba(23,120,232,.22); }
 .step-card h3 { margin: 0 0 8px; font-size: 22px; }
 .step-card p { margin: 0; color: var(--muted); }
+.process-summary { margin: 24px 0 0; color: var(--blue-dark); font-size: 18px; font-weight: 800; text-align: center; }
 .safety-note { display: flex; align-items: center; gap: 15px; margin-top: 20px; padding: 18px 22px; color: var(--blue-dark); background: var(--blue-soft); border-radius: 20px; }
 .safety-note span { flex: 0 0 auto; width: 34px; height: 34px; display: inline-flex; align-items: center; justify-content: center; background: var(--green); color: #fff; border-radius: 50%; font-weight: 900; }
 
@@ -130,7 +131,6 @@ h2 { margin: 0; font-size: clamp(36px, 4.5vw, 58px); line-height: 1.04; }
 .screens { display: grid; gap: 22px; }
 .two-screens { grid-template-columns: 1fr 1fr; }
 .screen-card, .flow-screen { margin: 0; }
-.screen-card.offset { padding-top: 58px; }
 .screen-card figcaption, .flow-screen figcaption { display: flex; align-items: center; gap: 11px; min-height: 50px; margin-bottom: 12px; color: var(--ink); }
 .screen-card figcaption span, .flow-screen figcaption span { flex: 0 0 auto; width: 38px; height: 38px; display: inline-flex; align-items: center; justify-content: center; border-radius: 50%; background: var(--blue); color: #fff; font-weight: 900; }
 .screen-card figcaption strong, .flow-screen figcaption strong { line-height: 1.2; }
@@ -276,11 +276,11 @@ h2 { margin: 0; font-size: clamp(36px, 4.5vw, 58px); line-height: 1.04; }
   .hero-card-main > strong { font-size: 31px; }
   .hero-card-main .phone-shell { width: 210px; right: 20px; bottom: -196px; }
   .hero-card-side { left: 14px; bottom: 34px; width: 230px; }
+  .hero-card-side strong, .hero-card-side small { white-space: normal; }
   .benefit-strip { gap: 9px; }
   .benefit-strip span { min-height: 65px; font-size: 15px; }
   .section { padding: 64px 0; }
   .two-screens { gap: 10px; }
-  .screen-card.offset { padding-top: 30px; }
   .screen-card figcaption { min-height: 68px; align-items: flex-start; font-size: 13px; }
   .screen-card figcaption span { width: 32px; height: 32px; }
   .phone-frame { padding: 5px; border-radius: 24px; }
