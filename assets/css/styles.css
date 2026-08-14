@@ -90,9 +90,9 @@ h1 { margin: 18px 0 22px; font-size: clamp(50px, 6vw, 78px); line-height: .98; }
 .hero-card-main::before { content: ""; position: absolute; width: 260px; height: 260px; right: -90px; top: -100px; border: 62px solid rgba(255,255,255,.1); border-radius: 50%; }
 .hero-card-main .mini-label { display: block; position: relative; z-index: 1; margin-bottom: 13px; font-size: 12px; letter-spacing: .14em; font-weight: 900; }
 .hero-card-main > strong { position: relative; z-index: 1; display: block; font-size: clamp(31px, 3.4vw, 46px); line-height: 1.02; letter-spacing: -.045em; }
-.hero-card-main .phone-shell { position: absolute; width: min(280px, 59%); height: 520px; right: 34px; bottom: -18px; padding: 8px; overflow: hidden; isolation: isolate; clip-path: inset(0 round 38px); background: var(--ink); border-radius: 38px; box-shadow: 0 24px 54px rgba(0,0,0,.26); }
-.hero-card-main .phone-shell::after { content: ""; position: absolute; z-index: 9; inset: 0; box-sizing: border-box; border: 8px solid var(--ink); border-radius: 38px; pointer-events: none; }
-.counter-screen-stage { position: absolute; top: 8px; right: 8px; bottom: 20px; left: 8px; width: auto; overflow: hidden; border-radius: 31px; line-height: 0; container-type: inline-size; }
+.hero-card-main .phone-shell { position: absolute; width: min(280px, 59%); height: 620px; right: 34px; bottom: -118px; padding: 8px; overflow: hidden; isolation: isolate; background: var(--ink); border-radius: 38px 38px 0 0; box-shadow: 0 24px 54px rgba(0,0,0,.26); }
+.hero-card-main .phone-shell::after { content: ""; position: absolute; z-index: 9; inset: 0; box-sizing: border-box; border-top: 8px solid var(--ink); border-right: 8px solid var(--ink); border-left: 8px solid var(--ink); border-radius: 38px 38px 0 0; pointer-events: none; }
+.counter-screen-stage { position: absolute; top: 8px; right: 8px; bottom: 0; left: 8px; width: auto; overflow: hidden; background: #f2f7fd; border-radius: 31px 31px 0 0; line-height: 0; container-type: inline-size; }
 .counter-screen-stage > img { width: 100%; height: auto; }
 .counter-entry-screen { position: relative; z-index: 1; }
 .counter-success-screen { position: absolute; z-index: 5; inset: 0; opacity: 0; transform: scale(.985); transition: opacity .42s ease, transform .55s cubic-bezier(.2, .75, .25, 1); pointer-events: none; }
@@ -314,7 +314,7 @@ h2 { margin: 0; font-size: clamp(36px, 4.5vw, 58px); line-height: 1.04; }
   .hero-visual { min-height: 620px; }
   .hero-card-main { inset: 0 0 20px; padding: 26px 23px 0; }
   .hero-card-main > strong { font-size: 31px; }
-  .hero-card-main .phone-shell { width: 228px; height: 430px; right: 18px; bottom: -12px; }
+  .hero-card-main .phone-shell { width: 228px; height: 520px; right: 18px; bottom: -102px; }
   .screen-counter-value { font-size: 40px; }
   .benefit-strip { gap: 9px; }
   .benefit-strip span { min-height: 65px; font-size: 15px; }
