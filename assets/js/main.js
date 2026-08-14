@@ -21,7 +21,23 @@ document.addEventListener('DOMContentLoaded', () => {
     increaseButton.disabled = value === 99;
   };
 
-  decreaseButton.addEventListener('click', () => updateCounter(value - 1));
-  increaseButton.addEventListener('click', () => updateCounter(value + 1));
+  const bindCounterButton = (button, step) => {
+    if ('PointerEvent' in window) {
+      button.addEventListener('pointerup', (event) => {
+        if (!event.isPrimary || event.button !== 0) return;
+        updateCounter(value + step);
+      });
+
+      button.addEventListener('click', (event) => {
+        if (event.detail === 0) updateCounter(value + step);
+      });
+      return;
+    }
+
+    button.addEventListener('click', () => updateCounter(value + step));
+  };
+
+  bindCounterButton(decreaseButton, -1);
+  bindCounterButton(increaseButton, 1);
   updateCounter(value);
 });
