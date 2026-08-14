@@ -304,11 +304,11 @@ h2 { margin: 0; font-size: clamp(36px, 4.5vw, 58px); line-height: 1.04; }
   .hero-card-main > strong { font-size: 31px; }
   .hero-card-main .phone-shell { width: 228px; right: 18px; bottom: -96px; }
   .bottle-counter-demo { min-height: 360px; padding: 19px 14px; }
-  .counter-demo-title { margin-top: 22px; font-size: 24px; }
-  .counter-demo-controls { grid-template-columns: 48px 1fr 48px; gap: 7px; margin-top: 22px; padding: 12px 10px; border-radius: 22px; }
+  .counter-demo-title { margin-top: 6px; font-size: 19px; }
+  .counter-demo-controls { grid-template-columns: 48px 1fr 48px; gap: 7px; margin-top: 0; padding: 12px 10px; border-radius: 22px; }
   .counter-button { width: 48px; height: 48px; font-size: 30px; }
   .counter-demo-value strong { font-size: 45px; }
-  .hero-card-side { left: 0; right: 0; bottom: 34px; width: auto; padding: 12px 15px; border-radius: 24px; }
+  .hero-card-side { left: 0; right: 0; bottom: 26px; width: auto; padding: 12px 15px; border-radius: 24px; }
   .hero-card-side strong { font-size: 16px; white-space: nowrap; }
   .hero-card-side small { margin-top: 2px; font-size: 12px; white-space: nowrap; }
   .benefit-strip { gap: 9px; }
