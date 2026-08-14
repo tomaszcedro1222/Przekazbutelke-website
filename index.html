@@ -71,7 +71,23 @@
         <div class="hero-card hero-card-main">
           <span class="mini-label">PRZEKAŻ BUTELKĘ</span>
           <strong>Wybierz liczbę.<br>Oznacz punkt.<br>Gotowe.</strong>
-          <div class="phone-shell"><img src="/assets/images/oddajacy-liczba.png" alt="Ekran wyboru liczby opakowań w aplikacji"></div>
+          <div class="phone-shell">
+            <div class="bottle-counter-demo" data-bottle-counter aria-label="Interaktywny podgląd wyboru liczby opakowań">
+              <div class="counter-demo-top">
+                <span>PRZEKAŻ BUTELKĘ</span>
+                <span class="counter-demo-stars" aria-label="Pięć gwiazdek">★★★★★</span>
+              </div>
+              <strong class="counter-demo-title">Przybliżona<br>liczba<br>opakowań</strong>
+              <div class="counter-demo-controls">
+                <button type="button" class="counter-button counter-minus" data-counter-decrease aria-label="Zmniejsz liczbę opakowań">−</button>
+                <span class="counter-demo-value">
+                  <strong data-counter-value aria-live="polite">5</strong>
+                  <small>opakowań</small>
+                </span>
+                <button type="button" class="counter-button counter-plus" data-counter-increase aria-label="Zwiększ liczbę opakowań">+</button>
+              </div>
+            </div>
+          </div>
         </div>
         <div class="hero-card hero-card-side">
           <span class="status-dot"></span>
@@ -281,6 +297,6 @@
   </div>
   <div class="container footer-bottom"><span>© Przekaż Butelkę</span><span>Pilotaż lokalny • Legionowo</span></div>
 </footer>
-<script src="/assets/js/main.js"></script>
+<script src="/assets/js/main.js?v=2"></script>
 </body>
 </html>
