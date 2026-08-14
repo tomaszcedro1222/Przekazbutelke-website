@@ -323,6 +323,7 @@ h2 { margin: 0; font-size: clamp(36px, 4.5vw, 58px); line-height: 1.04; }
   .receiver-flow { gap: 14px; }
   .flow-screen figcaption { justify-content: center; text-align: center; }
   .section { padding: 64px 0; }
+  #jak-dziala .section-heading { text-align: left; }
   #jak-dziala { padding-bottom: 24px; }
   .two-screens { gap: 10px; }
   .screen-card figcaption { min-height: 68px; align-items: flex-start; font-size: 13px; }
