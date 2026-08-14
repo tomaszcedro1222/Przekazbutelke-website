@@ -91,14 +91,32 @@ h1 { margin: 18px 0 22px; font-size: clamp(50px, 6vw, 78px); line-height: .98; }
 .hero-card-main .mini-label { display: block; position: relative; z-index: 1; margin-bottom: 13px; font-size: 12px; letter-spacing: .14em; font-weight: 900; }
 .hero-card-main > strong { position: relative; z-index: 1; display: block; font-size: clamp(31px, 3.4vw, 46px); line-height: 1.02; letter-spacing: -.045em; }
 .hero-card-main .phone-shell { position: absolute; width: min(280px, 59%); height: 520px; right: 34px; bottom: -18px; padding: 8px; overflow: hidden; background: var(--ink); border-radius: 38px; box-shadow: 0 24px 54px rgba(0,0,0,.26); }
-.counter-screen-stage { position: absolute; top: 8px; left: 8px; right: 8px; width: auto; overflow: hidden; border-radius: 31px; line-height: 0; }
+.counter-screen-stage { position: absolute; top: 8px; left: 8px; right: 8px; width: auto; overflow: hidden; border-radius: 31px; line-height: 0; container-type: inline-size; }
 .counter-screen-stage > img { width: 100%; height: auto; }
+.counter-entry-screen { position: relative; z-index: 1; }
+.counter-success-screen { position: absolute; z-index: 5; inset: 0; opacity: 0; transform: scale(.985); transition: opacity .42s ease, transform .55s cubic-bezier(.2, .75, .25, 1); pointer-events: none; }
+.counter-success-copy { position: absolute; z-index: 6; left: 4%; top: 44.8%; width: 92%; padding: 1.5% 0 1.7%; opacity: 0; background: #f2f7fd; color: #555a60; font-size: 4.25cqw; font-weight: 400; line-height: 1.35; letter-spacing: .01em; text-align: center; pointer-events: none; transition: opacity .42s ease; }
+.counter-screen-stage::after { content: ""; position: absolute; z-index: 7; inset: 0; background: #fff; opacity: 0; pointer-events: none; }
+.counter-screen-stage.is-transitioning::after { animation: counter-screen-flash .58s ease-out; }
+.counter-screen-stage.is-complete .counter-success-screen { opacity: 1; transform: scale(1); }
+.counter-screen-stage.is-complete .counter-success-copy { opacity: 1; }
+.counter-screen-stage.is-complete .screen-counter-button,
+.counter-screen-stage.is-complete .screen-counter-value,
+.counter-screen-stage.is-complete .screen-counter-submit { opacity: 0; pointer-events: none; }
 .screen-counter-button { position: absolute; z-index: 4; top: 45.1%; width: 20%; aspect-ratio: 1; padding: 0; background: transparent; border: 0; border-radius: 50%; cursor: pointer; touch-action: manipulation; -webkit-tap-highlight-color: transparent; user-select: none; }
 .screen-counter-button:hover, .screen-counter-button:focus-visible { outline: 3px solid rgba(255, 255, 255, .86); outline-offset: 2px; }
 .screen-counter-button:disabled { cursor: not-allowed; opacity: .5; }
 .screen-counter-minus { left: 10.2%; }
 .screen-counter-plus { right: 10.2%; }
 .screen-counter-value { position: absolute; z-index: 3; left: 37%; top: 44.7%; width: 26%; height: 9%; display: flex; align-items: center; justify-content: center; background: #fff; color: var(--ink); font-size: 50px; line-height: 1; letter-spacing: -.055em; }
+.screen-counter-submit { position: absolute; z-index: 4; left: 6%; top: 78%; width: 88%; height: 8.5%; padding: 0; background: transparent; border: 0; border-radius: 999px; cursor: pointer; touch-action: manipulation; -webkit-tap-highlight-color: transparent; }
+.screen-counter-submit:focus-visible { outline: 3px solid rgba(255, 255, 255, .9); outline-offset: 3px; }
+
+@keyframes counter-screen-flash {
+  0% { opacity: 0; }
+  32% { opacity: .92; }
+  100% { opacity: 0; }
+}
 .benefit-strip { position: relative; z-index: 2; display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 25px; }
 .benefit-strip span { min-height: 84px; display: flex; align-items: center; justify-content: center; padding: 18px; color: var(--blue-dark); background: rgba(231, 242, 255, .84); border: 1px solid #d7eafe; border-radius: 24px; font-size: 17px; font-weight: 820; text-align: center; line-height: 1.2; }
 
