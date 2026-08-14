@@ -105,10 +105,10 @@ h1 { margin: 18px 0 22px; font-size: clamp(50px, 6vw, 78px); line-height: .98; }
 .counter-demo-value strong, .counter-demo-value small { display: block; }
 .counter-demo-value strong { font-size: 55px; line-height: .88; letter-spacing: -.055em; }
 .counter-demo-value small { margin-top: 7px; color: #5b6d80; font-size: 12px; font-weight: 800; }
-.hero-card-side { position: absolute; left: 0; bottom: 38px; width: 365px; padding: 15px 20px; background: #fff; border: 1px solid var(--line); color: var(--ink); }
-.hero-card-side .status-dot { width: 12px; height: 12px; display: inline-block; margin-right: 7px; border-radius: 50%; background: var(--green); box-shadow: 0 0 0 6px rgba(22, 167, 101, .1); }
-.hero-card-side strong { font-size: 18px; white-space: nowrap; }
-.hero-card-side small { display: block; margin-top: 5px; color: var(--muted); line-height: 1.35; white-space: nowrap; }
+.hero-card-side { position: absolute; z-index: 3; left: 50%; top: 16px; width: calc(100% - 20px); padding: 10px 12px; transform: translateX(-50%); background: rgba(255, 255, 255, .97); border: 1px solid var(--line); border-radius: 18px; color: var(--ink); box-shadow: 0 12px 28px rgba(10, 40, 75, .2); pointer-events: none; }
+.hero-card-side .status-dot { width: 9px; height: 9px; display: inline-block; margin-right: 5px; border-radius: 50%; background: var(--green); box-shadow: 0 0 0 4px rgba(22, 167, 101, .1); }
+.hero-card-side strong { font-size: 12px; white-space: nowrap; }
+.hero-card-side small { display: block; margin-top: 2px; color: var(--muted); font-size: 9px; line-height: 1.25; white-space: nowrap; }
 .benefit-strip { position: relative; z-index: 2; display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 25px; }
 .benefit-strip span { min-height: 84px; display: flex; align-items: center; justify-content: center; padding: 18px; color: var(--blue-dark); background: rgba(231, 242, 255, .84); border: 1px solid #d7eafe; border-radius: 24px; font-size: 17px; font-weight: 820; text-align: center; line-height: 1.2; }
 
@@ -304,13 +304,13 @@ h2 { margin: 0; font-size: clamp(36px, 4.5vw, 58px); line-height: 1.04; }
   .hero-card-main > strong { font-size: 31px; }
   .hero-card-main .phone-shell { width: 228px; right: 18px; bottom: -96px; }
   .bottle-counter-demo { min-height: 360px; padding: 19px 14px; }
-  .counter-demo-title { margin-top: 6px; font-size: 19px; }
-  .counter-demo-controls { grid-template-columns: 48px 1fr 48px; gap: 7px; margin-top: 0; padding: 12px 10px; border-radius: 22px; }
+  .counter-demo-title { margin-top: 22px; font-size: 24px; }
+  .counter-demo-controls { grid-template-columns: 48px 1fr 48px; gap: 7px; margin-top: 22px; padding: 12px 10px; border-radius: 22px; }
   .counter-button { width: 48px; height: 48px; font-size: 30px; }
   .counter-demo-value strong { font-size: 45px; }
-  .hero-card-side { left: 0; right: 0; bottom: 26px; width: auto; padding: 12px 15px; border-radius: 24px; }
-  .hero-card-side strong { font-size: 16px; white-space: nowrap; }
-  .hero-card-side small { margin-top: 2px; font-size: 12px; white-space: nowrap; }
+  .hero-card-side { top: 8px; width: calc(100% - 16px); padding: 6px 9px; border-radius: 15px; }
+  .hero-card-side strong { font-size: 10.5px; }
+  .hero-card-side small { font-size: 8px; }
   .benefit-strip { gap: 9px; }
   .benefit-strip span { min-height: 65px; font-size: 15px; }
   .receiver-flow { gap: 14px; }
@@ -337,8 +337,8 @@ h2 { margin: 0; font-size: clamp(36px, 4.5vw, 58px); line-height: 1.04; }
 
 @media (max-width: 360px) {
   .actions .btn { padding-inline: 6px; font-size: 14px; }
-  .hero-card-side strong { font-size: 15px; }
-  .hero-card-side small { font-size: 11px; }
+  .hero-card-side strong { font-size: 10.5px; }
+  .hero-card-side small { font-size: 8px; }
 }
 
 @media (prefers-reduced-motion: reduce) {
