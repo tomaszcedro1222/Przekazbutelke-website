@@ -1,14 +1,285 @@
-<!doctype html><html lang="pl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Przekaż Butelkę – oddaj opakowania komuś, kto je odbierze</title><meta name="description" content="Przekaż Butelkę łączy osoby, które chcą oddać butelki i puszki kaucyjne, z osobami gotowymi je odebrać."><meta name="keywords" content="Przekaż Butelkę, butelki kaucyjne, opakowania kaucyjne, system kaucyjny, butelkomat, odbiór butelek, oddaj butelki, recykling, puszki kaucyjne, kaucja, Polska"><meta name="robots" content="index,follow,max-image-preview:large"><meta name="theme-color" content="#070b12"><link rel="canonical" href="https://przekazbutelke.pl/"><link rel="icon" href="/assets/images/app-icon.png"><link rel="stylesheet" href="/assets/css/styles.css"></head><body>
-<header class="site-header"><div class="container nav"><a class="brand" href="/"><img src="/assets/images/app-icon.png" alt=""><span>Przekaż Butelkę</span></a><nav class="nav-links"><a href="#oddajacy">Oddający</a><a href="#odbierajacy">Odbierający</a><a href="#dlaczego">Dlaczego</a><a href="/wsparcie/">Wsparcie</a><a class="nav-cta" href="#dolacz">Dołącz</a></nav></div></header>
-<main>
-<section class="hero"><div class="container hero-grid"><div><span class="kicker">Pilotaż lokalny • Legionowo</span><h1>Nie wyrzucaj wartości. <span>Przekaż ją dalej.</span></h1><p class="hero-lead">Są osoby, które <strong>wyrzucają butelki i puszki, bo nie mają czasu jechać do butelkomatu</strong>. Są też osoby, które chcą je odebrać i na nich dorobić — <strong>bez grzebania w śmieciach</strong>. Przekaż Butelkę łączy jednych z drugimi.</p><div class="actions"><a class="btn btn-primary" href="#oddajacy">Perspektywa oddającego</a><a class="btn btn-secondary" href="#odbierajacy">Perspektywa odbiorcy</a></div><div class="hero-pills"><span>Bezpłatne przekazanie</span><span>Więcej recyklingu</span><span>Czystsze ulice</span><span>Pomoc, nie jałmużna</span></div></div><div class="hero-visual"><div class="phone phone-main"><img src="/assets/images/odbierajacy-lista.png" alt=""></div><div class="phone phone-left"><img src="/assets/images/oddajacy-liczba.png" alt=""></div><div class="phone phone-bottom"><img src="/assets/images/odbierajacy-mapa.jpg" alt=""></div><div class="floating-label label-give">Oddaję butelki</div><div class="floating-label label-pick">Odbieram butelki</div><div class="floating-label label-map">Mapa i punkty</div></div></div></section>
-<div class="band"><div class="container band-row"><span><i></i>Startujemy w Legionowie</span><span><i></i>Łączy oddających i odbierających</span><span><i></i>Ogranicza wyrzucanie opakowań</span><span><i></i>Prosty interfejs</span></div></div>
-<section class="section alt"><div class="container"><div class="eyebrow">Dwie perspektywy</div><h2 class="section-title">Ta sama aplikacja. Dwa proste scenariusze.</h2><p class="section-intro">Pokazujemy interfejs z perspektywy osoby, która chce przekazać opakowania, i osoby, która chce je odebrać.</p><div class="dual-intro"><div class="dual-card"><h3>Oddający butelki</h3><p>Podaje liczbę opakowań, wystawia punkt i gotowe. <strong>Oszczędza czas i pomaga komuś dorobić.</strong></p></div><div class="dual-card"><h3>Odbierający butelki</h3><p>Widok listy i mapy ułatwia znalezienie punktów. <strong>Zamiast szukać w koszach — odbiera gotowe pakiety.</strong></p></div></div></div></section>
-<section class="section" id="oddajacy"><div class="container"><div class="eyebrow">Perspektywa oddającego</div><h2 class="section-title">Dodajesz punkt odbioru w kilku prostych krokach.</h2><p class="section-intro">Najpierw podajesz liczbę opakowań, potem publikujesz punkt i opcjonalnie dodajesz moderowane zdjęcie.</p><div class="carousel-wrap"><div class="carousel-toolbar"><div class="hint">Przesuń palcem albo użyj strzałek.</div><div class="carousel-actions"><button class="carousel-btn" id="giverPrev">‹</button><button class="carousel-btn" id="giverNext">›</button></div></div><div class="carousel" id="giverCarousel"><article class="slide"><div class="slide-media"><img src="/assets/images/oddajacy-liczba.png" alt=""></div><div class="slide-content"><span class="slide-topline">ODDAJĘ BUTELKI</span><h3>Podaj liczbę opakowań</h3><p>Duże przyciski + i – pomagają szybko ustawić przybliżoną liczbę.</p></div></article><article class="slide"><div class="slide-media"><img src="/assets/images/oddajacy-gotowe.png" alt=""></div><div class="slide-content"><span class="slide-topline">ODDAJĘ BUTELKI</span><h3>Punkt jest gotowy</h3><p>Po publikacji można opcjonalnie zrobić zdjęcie wystawionych opakowań, które pojawi się po moderacji.</p></div></article></div></div></div></section>
-<section class="section alt" id="odbierajacy"><div class="container"><div class="eyebrow">Perspektywa odbiorcy</div><h2 class="section-title">Znajdujesz punkty w pobliżu i odbierasz gotowe pakiety.</h2><p class="section-intro">Lista, mapa i aktywny odbiór prowadzą użytkownika krok po kroku.</p><div class="carousel-wrap"><div class="carousel-toolbar"><div class="hint">Przesuń palcem albo użyj strzałek.</div><div class="carousel-actions"><button class="carousel-btn" id="receiverPrev">‹</button><button class="carousel-btn" id="receiverNext">›</button></div></div><div class="carousel" id="receiverCarousel"><article class="slide"><div class="slide-media"><img src="/assets/images/odbierajacy-lista.png" alt=""></div><div class="slide-content"><span class="slide-topline">ODBIERAM BUTELKI</span><h3>Punkty w pobliżu</h3><p>Lista pokazuje liczbę opakowań, dystans i przybliżony czas dojścia.</p></div></article><article class="slide"><div class="slide-media"><img src="/assets/images/odbierajacy-mapa.jpg" alt=""></div><div class="slide-content"><span class="slide-topline">ODBIERAM BUTELKI</span><h3>Mapa punktów</h3><p>Możesz zobaczyć wszystkie dostępne punkty w okolicy.</p></div></article><article class="slide"><div class="slide-media"><img src="/assets/images/odbierajacy-aktywny.jpg" alt=""></div><div class="slide-content"><span class="slide-topline">ODBIERAM BUTELKI</span><h3>Aktywny odbiór</h3><p>Po rezerwacji aplikacja prowadzi do miejsca i pozwala potwierdzić wynik.</p></div></article></div></div></div></section>
-<section class="section" id="dlaczego"><div class="container"><div class="eyebrow">Dlaczego to ma sens</div><h2 class="section-title">Jeden prosty gest. Kilka dobrych skutków.</h2><div class="cards"><article class="card"><strong>Pomoc ludziom</strong><p>Oddajesz coś, czego sam nie wykorzystasz, osobie, dla której ma realną wartość.</p></article><article class="card"><strong>Godny sposób dorobienia</strong><p>Bez przeszukiwania koszy i rozrywania worków.</p></article><article class="card"><strong>Czystsze miasta</strong><p>Mniej chaosu wokół koszy i więcej porządku na ulicach.</p></article><article class="card"><strong>Więcej recyklingu</strong><p>Więcej opakowań wraca do obiegu zamiast do odpadów zmieszanych.</p></article></div></div></section>
-<section class="section alt"><div class="container"><div class="eyebrow">FAQ</div><h2 class="section-title">Najczęstsze pytania</h2><div class="faq"><details><summary>Czy osoba przekazująca dostaje pieniądze?</summary><p>Nie. Opakowania są przekazywane bezpłatnie odbierającemu.</p></details><details><summary>Gdzie działa aplikacja?</summary><p>Pierwszy etap działania obejmuje Legionowo i najbliższą okolicę. Zasięg będzie rozszerzany wraz z rozwojem społeczności.</p></details><details><summary>Jak usunąć konto?</summary><p>Skorzystaj ze strony <a href="/usun-konto/">Usuń konto</a>.</p></details></div></div></section>
-<section class="section" id="dolacz"><div class="container"><div class="cta"><div class="eyebrow">Dołącz do nas</div><h2>Zrób coś dobrego. Przekaż Butelkę.</h2><p>Jeśli masz opakowania, których sam nie oddasz — przekaż je. Jeśli chcesz je odbierać — znajdź punkty w swojej okolicy.</p><div class="store-row"><div class="store"><small>Wkrótce</small><strong>App Store</strong></div><div class="store"><small>Wkrótce</small><strong>Google Play</strong></div></div></div></div></section>
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Przekaż Butelkę – oddaj opakowania komuś, kto je odbierze</title>
+  <meta name="description" content="Przekaż Butelkę łączy w Legionowie osoby przekazujące opakowania kaucyjne z tymi, które chcą je odebrać i zanieść do butelkomatu.">
+  <meta name="keywords" content="Przekaż Butelkę, Legionowo, butelki kaucyjne, opakowania kaucyjne, system kaucyjny, butelkomat, odbiór butelek, recykling">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <meta name="theme-color" content="#f4f9ff">
+  <link rel="canonical" href="https://przekazbutelke.pl/">
+  <link rel="icon" href="/assets/images/app-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pl_PL">
+  <meta property="og:title" content="Przekaż Butelkę – podaj wartość dalej">
+  <meta property="og:description" content="Nowy punkt z butelkami dodasz w mniej niż 10 sekund. Pilotaż aplikacji startuje w Legionowie.">
+  <meta property="og:url" content="https://przekazbutelke.pl/">
+  <meta property="og:image" content="https://przekazbutelke.pl/assets/images/og-przekaz-butelke.png">
+  <link rel="stylesheet" href="/assets/css/styles.css">
+</head>
+<body>
+<a class="skip-link" href="#tresc">Przejdź do treści</a>
+<header class="site-header">
+  <div class="container nav">
+    <a class="brand" href="/" aria-label="Przekaż Butelkę – strona główna">
+      <img src="/assets/images/app-icon.png" alt="">
+      <span>Przekaż Butelkę</span>
+    </a>
+    <nav class="nav-links" aria-label="Główna nawigacja">
+      <a href="#jak-dziala">Jak to działa</a>
+      <a href="#oddajacy">Przekazuję</a>
+      <a href="#odbierajacy">Odbieram</a>
+      <a href="#historia">Historia</a>
+      <a href="#patroni">Patroni</a>
+      <a class="nav-cta" href="#dolacz">Start w Legionowie</a>
+    </nav>
+    <details class="mobile-menu">
+      <summary>Menu</summary>
+      <nav aria-label="Nawigacja mobilna">
+        <a href="#jak-dziala">Jak to działa</a>
+        <a href="#oddajacy">Przekazuję</a>
+        <a href="#odbierajacy">Odbieram</a>
+        <a href="#historia">Historia</a>
+        <a href="#patroni">Patroni</a>
+        <a href="#dolacz">Start w Legionowie</a>
+      </nav>
+    </details>
+  </div>
+</header>
+
+<main id="tresc">
+  <section class="hero">
+    <div class="container hero-grid">
+      <div class="hero-copy">
+        <div class="kicker"><span></span>Pilotaż lokalny • Legionowo</div>
+        <h1>Butelki trafiają do butelkomatu, <em>nie do kosza.</em></h1>
+        <p class="hero-lead">Przekaż Butelkę łączy osoby, które chcą bezpłatnie przekazać opakowania, z tymi, które chcą je odebrać i zanieść do butelkomatu.</p>
+        <div class="hero-time" aria-label="Dodanie punktu trwa mniej niż 10 sekund">
+          <strong>&lt; 10 s</strong>
+          <span>tyle trwa dodanie<br>nowego punktu</span>
+        </div>
+        <div class="actions">
+          <a class="btn btn-primary" href="#oddajacy">Chcę przekazać</a>
+          <a class="btn btn-outline" href="#odbierajacy">Chcę odbierać</a>
+        </div>
+      </div>
+      <div class="hero-visual" aria-label="Ekrany aplikacji Przekaż Butelkę">
+        <div class="hero-card hero-card-main">
+          <span class="mini-label">PRZEKAŻ BUTELKĘ</span>
+          <strong>Wybierz liczbę.<br>Oznacz punkt.<br>Gotowe.</strong>
+          <div class="phone-shell"><img src="/assets/images/oddajacy-liczba.png" alt="Ekran wyboru liczby opakowań w aplikacji"></div>
+        </div>
+        <div class="hero-card hero-card-side">
+          <span class="status-dot"></span>
+          <strong>Punkt aktywny</strong>
+          <small>Najbliższe osoby dostają informację</small>
+        </div>
+      </div>
+    </div>
+    <div class="container benefit-strip" aria-label="Najważniejsze korzyści">
+      <span>bez umawiania spotkań</span>
+      <span>bez przeszukiwania odpadów</span>
+      <span>z korzyścią dla lokalnej społeczności</span>
+    </div>
+  </section>
+
+  <section class="section section-soft" id="jak-dziala">
+    <div class="container">
+      <div class="section-heading centered">
+        <div class="eyebrow">Jak to działa</div>
+        <h2>Dwie osoby. Jeden prosty punkt.</h2>
+        <p>Bez ogłoszeń, telefonów i umawiania spotkania.</p>
+      </div>
+      <div class="steps-grid">
+        <article class="step-card">
+          <span class="step-number">1</span>
+          <h3>Przekazujesz</h3>
+          <p>Podajesz przybliżoną liczbę opakowań i zostawiasz je w bezpiecznym miejscu.</p>
+        </article>
+        <article class="step-card">
+          <span class="step-number">2</span>
+          <h3>Aplikacja informuje</h3>
+          <p>Wyszukuje najbliższe osoby odbierające i przekazuje im informację o punkcie.</p>
+        </article>
+        <article class="step-card">
+          <span class="step-number">3</span>
+          <h3>Ktoś odbiera</h3>
+          <p>Mapa prowadzi na miejsce, a opakowania mogą trafić prosto do butelkomatu.</p>
+        </article>
+      </div>
+      <div class="safety-note"><span>✓</span><strong>Opakowania pozostawiasz tak, aby nie utrudniały ruchu i były łatwe do bezpiecznego odebrania.</strong></div>
+    </div>
+  </section>
+
+  <section class="section" id="oddajacy">
+    <div class="container split-layout">
+      <div class="split-copy">
+        <div class="eyebrow">Chcę przekazać</div>
+        <h2>Pomagasz komuś dorobić. Nie tracisz czasu.</h2>
+        <p class="lead">Nie masz czasu, możliwości lub chęci korzystania z automatu kaucyjnego? Przekaż opakowania bezpłatnie komuś, komu realnie się przydadzą.</p>
+        <div class="quote-card">
+          <span>„</span>
+          <strong>Lepiej dać komuś możliwość uczciwego zarobku niż jałmużnę.</strong>
+        </div>
+        <ul class="check-list">
+          <li><span>✓</span><div><strong>Mniej niż 10 sekund</strong><small>Wybierasz liczbę opakowań i dodajesz punkt.</small></div></li>
+          <li><span>✓</span><div><strong>Bez dojazdu do butelkomatu</strong><small>Oddajesz to, czego sam nie zamierzasz zwrócić.</small></div></li>
+          <li><span>✓</span><div><strong>Prosty gest z realnym skutkiem</strong><small>Komuś dajesz możliwość dorobienia, a opakowaniom — drugie życie.</small></div></li>
+        </ul>
+      </div>
+      <div class="screens two-screens" aria-label="Jak przekazać butelki">
+        <figure class="screen-card">
+          <figcaption><span>1</span><strong>Podaj liczbę opakowań</strong></figcaption>
+          <div class="phone-frame"><img src="/assets/images/oddajacy-liczba.png" alt="Wybór przybliżonej liczby opakowań"></div>
+        </figure>
+        <figure class="screen-card offset">
+          <figcaption><span>2</span><strong>Dodaj punkt i gotowe</strong></figcaption>
+          <div class="phone-frame"><img src="/assets/images/oddajacy-gotowe.png" alt="Potwierdzenie dodania punktu odbioru"></div>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-blue" id="odbierajacy">
+    <div class="container">
+      <div class="section-heading light-heading">
+        <div class="eyebrow">Chcę odbierać</div>
+        <h2>Butelki znajdujesz w aplikacji, nie w śmieciach.</h2>
+        <p>Szybki i godny sposób na dodatkowy dochód lub kieszonkowe — bez przeszukiwania koszy, rozrywania worków i tworzenia bałaganu.</p>
+      </div>
+      <div class="receiver-benefits">
+        <article><strong>Szybciej niż inni</strong><p>Gdy punkt pojawi się blisko Ciebie, aplikacja może od razu wysłać powiadomienie.</p></article>
+        <article><strong>Najbliższe punkty</strong><p>Widzisz liczbę opakowań, odległość i przybliżony czas dojścia.</p></article>
+        <article><strong>Bezpiecznie do celu</strong><p>Rezerwujesz odbiór, a mapa prowadzi Cię do oznaczonego miejsca.</p></article>
+      </div>
+      <div class="receiver-flow" aria-label="Jak odebrać butelki">
+        <figure class="flow-screen">
+          <figcaption><span>1</span><strong>Widzisz punkt w pobliżu</strong></figcaption>
+          <div class="phone-frame"><img src="/assets/images/odbierajacy-lista.png" alt="Lista dostępnych punktów w pobliżu"></div>
+        </figure>
+        <figure class="flow-screen">
+          <figcaption><span>2</span><strong>Mapa prowadzi na miejsce</strong></figcaption>
+          <div class="phone-frame"><img src="/assets/images/odbierajacy-mapa.jpg" alt="Mapa z punktem odbioru"></div>
+        </figure>
+        <figure class="flow-screen">
+          <figcaption><span>3</span><strong>Potwierdzasz odbiór</strong></figcaption>
+          <div class="phone-frame"><img src="/assets/images/odbierajacy-aktywny.jpg" alt="Ekran aktywnego odbioru opakowań"></div>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="section reputation-section">
+    <div class="container reputation-grid">
+      <div>
+        <div class="eyebrow">Uczciwość się opłaca</div>
+        <h2>Gwiazdkami budujesz pierwszeństwo.</h2>
+        <p class="lead">Im lepsza historia odbiorów, tym większa szansa, że o nowym punkcie w pobliżu dowiesz się wcześniej.</p>
+      </div>
+      <div class="reputation-card">
+        <div class="stars" aria-label="Pięć gwiazdek">★★★★★</div>
+        <div class="reputation-row"><span class="plus">+1</span><p><strong>Prawidłowy odbiór</strong><br>Potwierdzasz odbiór i zdobywasz gwiazdkę.</p></div>
+        <div class="reputation-row"><span class="minus">−1</span><p><strong>Rezygnacja lub brak odbioru</strong><br>Rezerwujesz, ale nie docierasz — tracisz gwiazdkę.</p></div>
+        <small>Reputacja pomaga nagradzać rzetelne osoby i sprawniej kierować kolejne powiadomienia.</small>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-soft" id="dlaczego">
+    <div class="container">
+      <div class="section-heading centered">
+        <div class="eyebrow">Dobry skutek lokalnie</div>
+        <h2>Jedna aplikacja. Korzyść dla ludzi i miasta.</h2>
+      </div>
+      <div class="impact-grid">
+        <article><span>01</span><strong>Godny sposób dorobienia</strong><p>Bez grzebania w śmieciach i bez proszenia o pomoc.</p></article>
+        <article><span>02</span><strong>Mniej rozerwanych worków</strong><p>Łatwy dostęp do punktów ogranicza potrzebę przeszukiwania odpadów.</p></article>
+        <article><span>03</span><strong>Więcej zwrotów</strong><p>Opakowania trafiają do butelkomatu zamiast do kosza.</p></article>
+        <article><span>04</span><strong>Prosta sąsiedzka pomoc</strong><p>To, czego nie potrzebujesz, może mieć realną wartość dla kogoś obok.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section story-section" id="historia">
+    <div class="container story-grid">
+      <div class="story-title">
+        <div class="eyebrow">Dlaczego powstała aplikacja</div>
+        <h2>Zaczęło się od jednej torby ze śmieciami.</h2>
+      </div>
+      <div class="story-copy">
+        <p>Pewnego dnia, wynosząc śmieci, zobaczyłem młodego chłopaka z plecakiem, który szukał butelek w koszu. W mojej torbie było kilka opakowań, które mogły mieć dla niego wartość.</p>
+        <p>Pomyślałem wtedy: dlaczego nie ma prostego sposobu, by połączyć osoby, które nie chcą lub nie mogą korzystać z butelkomatu, z tymi, które tych opakowań szukają?</p>
+        <p class="story-ending"><strong>Tak powstała aplikacja Przekaż Butelkę.</strong> Jeśli będzie nas wystarczająco dużo, pomożemy ludziom uczciwie dorabiać i skierujemy więcej plastiku do recyklingu.</p>
+        <span class="signature">Tomasz Cedro, pomysłodawca</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="section patrons-section" id="patroni">
+    <div class="container">
+      <div class="section-heading centered">
+        <div class="eyebrow">Patroni i partnerzy</div>
+        <h2>Razem łatwiej dotrzeć do mieszkańców.</h2>
+        <p>Tu będą pojawiać się organizacje, instytucje i firmy wspierające pilotaż w Legionowie.</p>
+      </div>
+      <div class="patron-grid" aria-label="Miejsca dla patronów">
+        <div><span>Partner lokalny</span><strong>Miejsce na logotyp</strong></div>
+        <div><span>Partner strategiczny</span><strong>Miejsce na logotyp</strong></div>
+        <div><span>Patron medialny</span><strong>Miejsce na logotyp</strong></div>
+      </div>
+      <div class="patron-cta">
+        <div><strong>Chcesz zostać naszym patronem?</strong><p>Pomóż uruchomić lokalną zmianę, którą można później skalować dalej.</p></div>
+        <a class="btn btn-primary" href="mailto:tomasz@przekazbutelke.pl">Napisz: tomasz@przekazbutelke.pl</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section faq-section">
+    <div class="container faq-grid">
+      <div>
+        <div class="eyebrow">Warto wiedzieć</div>
+        <h2>Krótko i konkretnie.</h2>
+      </div>
+      <div class="faq">
+        <details><summary>Gdzie działa aplikacja?</summary><p>Pilotaż startuje w Legionowie. Zasięg będzie rozszerzany dopiero wraz z rozwojem lokalnej społeczności.</p></details>
+        <details><summary>Czy przekazujący dostaje pieniądze?</summary><p>Nie. Opakowania przekazuje bezpłatnie. Korzyścią jest wygoda i pewność, że mogą przydać się komuś innemu.</p></details>
+        <details><summary>Czy liczba opakowań musi być dokładna?</summary><p>Nie. W aplikacji podajesz przybliżoną liczbę, aby odbierający wiedział, czego się spodziewać.</p></details>
+        <details><summary>Jak usunąć konto?</summary><p>Możesz to zrobić w aplikacji lub na stronie <a href="/usun-konto/">Usuń konto</a>.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <section class="section cta-section" id="dolacz">
+    <div class="container">
+      <div class="cta">
+        <div>
+          <span class="cta-kicker">Startujemy w Legionowie</span>
+          <h2>Wystaw butelki. Oznacz punkt. Gotowe.</h2>
+          <p>Nic Cię to nie kosztuje, a komuś obok może realnie pomóc.</p>
+        </div>
+        <div class="store-row" aria-label="Aplikacja wkrótce w sklepach">
+          <div class="store"><small>Wkrótce</small><strong>App Store</strong></div>
+          <div class="store"><small>Wkrótce</small><strong>Google Play</strong></div>
+        </div>
+      </div>
+    </div>
+  </section>
 </main>
-<footer class="footer"><div class="container footer-grid"><div class="footer-brand"><a class="brand" href="/"><img src="/assets/images/app-icon.png" alt=""><span>Przekaż Butelkę</span></a><p>Łączymy osoby przekazujące opakowania kaucyjne z osobami gotowymi je odebrać.</p></div><div><h4>Nawigacja</h4><a href="#oddajacy">Oddający</a><a href="#odbierajacy">Odbierający</a></div><div><h4>Informacje</h4><a href="/polityka-prywatnosci/">Polityka prywatności</a><a href="/regulamin/">Regulamin</a><a href="/usun-konto/">Usuń konto</a></div><div><h4>Kontakt</h4><a href="/wsparcie/">Wsparcie</a><a href="mailto:przekazbutelke.cedrotomasz@gmail.com">przekazbutelke.cedrotomasz@gmail.com</a></div></div><div class="container footer-bottom"><span>© Przekaż Butelkę</span><span>Pilotaż lokalny • Legionowo</span></div></footer>
-<script src="/assets/js/main.js"></script></body></html>
+
+<footer class="footer">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <a class="brand" href="/"><img src="/assets/images/app-icon.png" alt=""><span>Przekaż Butelkę</span></a>
+      <p>Łączymy osoby przekazujące opakowania kaucyjne z tymi, które chcą je odebrać.</p>
+    </div>
+    <div><h4>Na stronie</h4><a href="#jak-dziala">Jak to działa</a><a href="#oddajacy">Przekazuję</a><a href="#odbierajacy">Odbieram</a><a href="#patroni">Patroni</a></div>
+    <div><h4>Informacje</h4><a href="/polityka-prywatnosci/">Polityka prywatności</a><a href="/regulamin/">Regulamin</a><a href="/usun-konto/">Usuń konto</a></div>
+    <div><h4>Kontakt</h4><a href="/wsparcie/">Wsparcie</a><a href="mailto:tomasz@przekazbutelke.pl">tomasz@przekazbutelke.pl</a></div>
+  </div>
+  <div class="container footer-bottom"><span>© Przekaż Butelkę</span><span>Pilotaż lokalny • Legionowo</span></div>
+</footer>
+<script src="/assets/js/main.js"></script>
+</body>
+</html>

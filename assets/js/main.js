@@ -1,1 +1,8 @@
-function bindCarousel(trackId,prevId,nextId){const t=document.getElementById(trackId),p=document.getElementById(prevId),n=document.getElementById(nextId);if(!t||!p||!n)return;const a=()=>Math.min(t.clientWidth*.86,340);p.addEventListener('click',()=>t.scrollBy({left:-a(),behavior:'smooth'}));n.addEventListener('click',()=>t.scrollBy({left:a(),behavior:'smooth'}));}window.addEventListener('DOMContentLoaded',()=>{bindCarousel('giverCarousel','giverPrev','giverNext');bindCarousel('receiverCarousel','receiverPrev','receiverNext');});
+document.addEventListener('DOMContentLoaded', () => {
+  const menu = document.querySelector('.mobile-menu');
+  if (!menu) return;
+
+  menu.querySelectorAll('a').forEach((link) => {
+    link.addEventListener('click', () => menu.removeAttribute('open'));
+  });
+});
