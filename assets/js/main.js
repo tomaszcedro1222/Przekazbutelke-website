@@ -13,6 +13,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const decreaseButton = counter.querySelector('[data-counter-decrease]');
   const increaseButton = counter.querySelector('[data-counter-increase]');
   const submitButton = counter.querySelector('[data-counter-submit]');
+  const resetButton = counter.querySelector('[data-counter-reset]');
+  const entryLabel = counter.getAttribute('aria-label');
   let value = Number(valueElement.textContent) || 5;
 
   const updateCounter = (nextValue) => {
@@ -44,12 +46,31 @@ document.addEventListener('DOMContentLoaded', () => {
     counter.classList.add('is-transitioning');
     submitButton.disabled = true;
 
-    window.setTimeout(() => counter.classList.add('is-complete'), 110);
+    window.setTimeout(() => {
+      counter.classList.add('is-complete');
+      counter.setAttribute('aria-label', 'Potwierdzenie dodania punktu z opakowaniami');
+      resetButton.disabled = false;
+    }, 110);
+    window.setTimeout(() => counter.classList.remove('is-transitioning'), 650);
+  };
+
+  const showEntryScreen = () => {
+    if (!counter.classList.contains('is-complete') || counter.classList.contains('is-transitioning')) return;
+
+    counter.classList.add('is-transitioning');
+    resetButton.disabled = true;
+
+    window.setTimeout(() => {
+      counter.classList.remove('is-complete');
+      counter.setAttribute('aria-label', entryLabel);
+      submitButton.disabled = false;
+    }, 110);
     window.setTimeout(() => counter.classList.remove('is-transitioning'), 650);
   };
 
   bindFastAction(decreaseButton, () => updateCounter(value - 1));
   bindFastAction(increaseButton, () => updateCounter(value + 1));
   bindFastAction(submitButton, showSuccessScreen);
+  bindFastAction(resetButton, showEntryScreen);
   updateCounter(value);
 });
