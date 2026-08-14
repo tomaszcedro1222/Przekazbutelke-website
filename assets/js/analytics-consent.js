@@ -4,6 +4,9 @@
   var measurementId = 'G-5PP6RMZNC7';
   var storageKey = 'pb_analytics_consent';
   var bannerId = 'cookie-consent';
+  var trackingInstalled = false;
+  var viewedSections = {};
+  var reachedScrollDepths = {};
 
   window.dataLayer = window.dataLayer || [];
   window.gtag = window.gtag || function () {
@@ -43,18 +46,123 @@
   }
 
   function loadAnalytics() {
-    if (document.querySelector('script[data-google-analytics]')) return;
-
     updateConsent(true);
 
-    var script = document.createElement('script');
-    script.async = true;
-    script.dataset.googleAnalytics = 'true';
-    script.src = 'https://www.googletagmanager.com/gtag/js?id=' + encodeURIComponent(measurementId);
-    document.head.appendChild(script);
+    if (!document.querySelector('script[data-google-analytics]')) {
+      var script = document.createElement('script');
+      script.async = true;
+      script.dataset.googleAnalytics = 'true';
+      script.src = 'https://www.googletagmanager.com/gtag/js?id=' + encodeURIComponent(measurementId);
+      document.head.appendChild(script);
 
-    window.gtag('js', new Date());
-    window.gtag('config', measurementId);
+      window.gtag('js', new Date());
+      window.gtag('config', measurementId);
+    }
+
+    installInteractionTracking();
+    window.setTimeout(recordVisibleSections, 0);
+  }
+
+  function canTrack() {
+    return readChoice() === 'granted' && Boolean(document.querySelector('script[data-google-analytics]'));
+  }
+
+  function trackEvent(name, parameters) {
+    if (!canTrack()) return;
+    window.gtag('event', name, parameters || {});
+  }
+
+  function linkArea(element) {
+    if (element.closest('.site-header')) return 'header';
+    if (element.closest('.hero')) return 'hero';
+    if (element.closest('.footer')) return 'footer';
+    if (element.closest('#patroni')) return 'patrons';
+    if (element.closest('.faq-section')) return 'faq';
+    return 'content';
+  }
+
+  function sectionName(section) {
+    return section.id || 'hero';
+  }
+
+  function recordSection(section) {
+    var name = sectionName(section);
+    if (viewedSections[name] || !canTrack()) return;
+    viewedSections[name] = true;
+    trackEvent('section_view', { section_name: name });
+  }
+
+  function recordVisibleSections() {
+    document.querySelectorAll('main > section').forEach(function (section) {
+      var bounds = section.getBoundingClientRect();
+      var visibleHeight = Math.min(bounds.bottom, window.innerHeight) - Math.max(bounds.top, 0);
+      if (visibleHeight > Math.min(180, bounds.height * 0.35)) recordSection(section);
+    });
+  }
+
+  function recordScrollDepth() {
+    if (!canTrack()) return;
+
+    var pageHeight = Math.max(document.documentElement.scrollHeight - window.innerHeight, 1);
+    var depth = Math.min(100, Math.round((window.scrollY / pageHeight) * 100));
+
+    [25, 50, 75, 90].forEach(function (threshold) {
+      if (depth >= threshold && !reachedScrollDepths[threshold]) {
+        reachedScrollDepths[threshold] = true;
+        trackEvent('scroll_depth', { percent_scrolled: threshold });
+      }
+    });
+  }
+
+  function installInteractionTracking() {
+    if (trackingInstalled) return;
+    trackingInstalled = true;
+
+    document.addEventListener('click', function (event) {
+      var link = event.target.closest('a');
+      if (!link || !canTrack()) return;
+
+      var href = link.getAttribute('href') || '';
+      var area = linkArea(link);
+
+      if (href.charAt(0) === '#') {
+        trackEvent('section_navigation', {
+          destination_section: href.slice(1) || 'top',
+          link_area: area
+        });
+      } else if (href.indexOf('mailto:') === 0) {
+        trackEvent('contact_click', {
+          contact_method: 'email',
+          link_area: area
+        });
+      } else if (href.charAt(0) === '/') {
+        trackEvent('internal_link_click', {
+          destination_path: href.split('#')[0],
+          link_area: area
+        });
+      }
+    });
+
+    document.addEventListener('toggle', function (event) {
+      if (event.target.matches('.faq-list details') && event.target.open) {
+        var position = Array.prototype.indexOf.call(event.target.parentNode.children, event.target) + 1;
+        trackEvent('faq_open', { faq_position: position });
+      }
+    }, true);
+
+    if ('IntersectionObserver' in window) {
+      var observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting && entry.intersectionRatio >= 0.35) recordSection(entry.target);
+        });
+      }, { threshold: [0.35] });
+
+      document.querySelectorAll('main > section').forEach(function (section) {
+        observer.observe(section);
+      });
+    }
+
+    window.addEventListener('scroll', recordScrollDepth, { passive: true });
   }
 
   function removeAnalyticsCookies() {
@@ -77,6 +185,7 @@
 
     if (choice === 'granted') {
       loadAnalytics();
+      trackEvent('analytics_consent_granted');
     } else {
       updateConsent(false);
       removeAnalyticsCookies();
@@ -141,6 +250,8 @@
       showBanner();
     }
   }
+
+  window.pbTrackEvent = trackEvent;
 
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', init);
