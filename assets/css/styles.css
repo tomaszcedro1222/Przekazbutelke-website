@@ -105,8 +105,8 @@ h1 { margin: 18px 0 22px; font-size: clamp(50px, 6vw, 78px); line-height: .98; }
 .counter-screen-stage.is-complete .screen-counter-button,
 .counter-screen-stage.is-complete .screen-counter-value,
 .counter-screen-stage.is-complete .screen-counter-submit { opacity: 0; pointer-events: none; }
-.screen-counter-button { position: absolute; z-index: 4; top: 97.8cqw; width: 20%; aspect-ratio: 1; padding: 0; background: transparent; border: 0; border-radius: 50%; cursor: pointer; touch-action: manipulation; -webkit-tap-highlight-color: transparent; user-select: none; }
-.screen-counter-button:hover, .screen-counter-button:focus-visible { outline: 3px solid rgba(255, 255, 255, .86); outline-offset: 2px; }
+.screen-counter-button { position: absolute; z-index: 4; top: 97.8cqw; width: 20%; aspect-ratio: 1; padding: 0; background: transparent; border: 0; border-radius: 50%; outline: none; box-shadow: none; cursor: pointer; touch-action: manipulation; -webkit-tap-highlight-color: transparent; user-select: none; }
+.screen-counter-button:hover, .screen-counter-button:focus, .screen-counter-button:focus-visible, .screen-counter-button:active { outline: none; box-shadow: none; filter: none; }
 .screen-counter-button:disabled { cursor: not-allowed; opacity: .5; }
 .screen-counter-minus { left: 10.2%; }
 .screen-counter-plus { right: 10.2%; }
