@@ -150,8 +150,8 @@ h2 { margin: 0; font-size: clamp(36px, 4.5vw, 58px); line-height: 1.04; }
 .split-layout { display: grid; grid-template-columns: .88fr 1.12fr; align-items: center; gap: clamp(42px, 7vw, 92px); }
 .split-copy h2 { margin-bottom: 16px; }
 .quote-card { position: relative; margin: 25px 0 27px; padding: 23px 24px 23px 60px; background: var(--blue); color: #fff; border-radius: 22px; box-shadow: var(--shadow-soft); }
-.quote-card span { position: absolute; left: 20px; top: 8px; font-size: 55px; line-height: 1; opacity: .45; }
-.quote-card::after { content: "”"; position: absolute; right: 19px; bottom: -15px; font-size: 55px; line-height: 1; opacity: .45; }
+.quote-card span { position: absolute; left: 20px; top: 13px; font-family: Georgia, serif; font-size: 55px; line-height: .75; opacity: .45; }
+.quote-card::after { content: "”"; position: absolute; right: 19px; bottom: 7px; font-family: Georgia, serif; font-size: 55px; line-height: .75; opacity: .45; }
 .quote-card strong { display: block; font-size: 19px; line-height: 1.4; }
 .check-list { display: grid; gap: 15px; margin: 0; padding: 0; list-style: none; }
 .check-list li { display: flex; gap: 13px; align-items: flex-start; }
