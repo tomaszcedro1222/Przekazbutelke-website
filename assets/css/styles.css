@@ -74,6 +74,7 @@ button, input, textarea { font: inherit; }
 h1, h2, h3 { color: var(--ink); letter-spacing: -.04em; }
 h1 { margin: 18px 0 22px; font-size: clamp(50px, 6vw, 78px); line-height: .98; }
 .hero h1 em { color: var(--blue); font-style: normal; }
+.hero h1 .hero-receive { color: var(--yellow); }
 .hero-lead { max-width: 650px; margin: 0 0 25px; font-size: clamp(18px, 1.75vw, 22px); color: #536b83; line-height: 1.55; }
 .hero-time { display: inline-flex; align-items: center; gap: 15px; padding: 12px 22px 12px 12px; margin-bottom: 22px; background: #fff; border: 1px solid var(--line); border-radius: 25px; box-shadow: var(--shadow-soft); }
 .hero-time-icon { flex: 0 0 auto; width: 62px; height: 62px; display: inline-flex; align-items: center; justify-content: center; background: var(--blue-soft); border-radius: 50%; }
