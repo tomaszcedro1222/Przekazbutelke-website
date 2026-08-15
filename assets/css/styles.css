@@ -271,6 +271,11 @@ h2 { margin: 0; font-size: clamp(36px, 4.5vw, 58px); line-height: 1.04; }
 .legal-content button { justify-self: start; cursor: pointer; }
 .legal-content .card { margin: 18px 0; padding: 17px; border-radius: 15px; background: var(--blue-soft); border: 1px solid #c5ddf5; }
 
+@media (min-width: 1041px) {
+  .hero-visual { min-height: 750px; }
+  .hero-card-main .phone-shell { bottom: -105px; }
+}
+
 @media (max-width: 1040px) {
   .nav-links { display: none; }
   .mobile-menu { display: block; }
