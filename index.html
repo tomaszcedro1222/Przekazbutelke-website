@@ -59,8 +59,17 @@
         <h1>Masz butelki? <em>Przekaż.</em><br>Masz po drodze? <em>Odbierz.</em></h1>
         <p class="hero-lead">Przekaż Butelkę łączy osoby, które chcą bezpłatnie przekazać opakowania, z tymi, które chcą je odebrać i zanieść do butelkomatu.</p>
         <div class="hero-time" aria-label="Dodanie punktu trwa mniej niż 10 sekund">
-          <strong>&lt; 10 s</strong>
-          <span>tyle trwa dodanie<br>nowego punktu</span>
+          <span class="hero-time-icon" aria-hidden="true">
+            <svg viewBox="0 0 64 64" focusable="false">
+              <circle cx="32" cy="32" r="23"></circle>
+              <path d="M32 19v14l10 6"></path>
+              <circle class="clock-center" cx="32" cy="33" r="2.8"></circle>
+              <path class="clock-marks" d="M32 12v3M32 49v3M12 32h3M49 32h3M18 18l2 2M44 44l2 2M46 18l-2 2M20 44l-2 2"></path>
+            </svg>
+          </span>
+          <strong>&lt;10 s</strong>
+          <span class="hero-time-divider" aria-hidden="true"></span>
+          <span class="hero-time-copy">tyle trwa dodanie<br>nowego punktu</span>
         </div>
         <div class="actions">
           <a class="btn btn-primary" href="#oddajacy">Chcę przekazać</a>
