@@ -207,11 +207,11 @@
     banner.innerHTML =
       '<div class="cookie-consent-copy">' +
         '<strong id="cookie-consent-title">Twoja prywatność</strong>' +
-        '<p id="cookie-consent-description">Za Twoją zgodą użyjemy Google Analytics, aby sprawdzić, jak odwiedzający korzystają ze strony. Odrzucenie analityki nie ograniczy jej działania. <a href="/polityka-prywatnosci/">Dowiedz się więcej</a>.</p>' +
+        '<p id="cookie-consent-description">Za zgodą używamy Google Analytics, aby ulepszać stronę. Odrzucenie nie ograniczy jej działania. <a href="/polityka-prywatnosci/">Więcej informacji</a>.</p>' +
       '</div>' +
       '<div class="cookie-consent-actions">' +
         '<button class="btn btn-outline" type="button" data-consent="denied">Tylko niezbędne</button>' +
-        '<button class="btn btn-primary" type="button" data-consent="granted">Akceptuję analitykę</button>' +
+        '<button class="btn btn-primary" type="button" data-consent="granted">Zgadzam się</button>' +
       '</div>';
 
     banner.querySelectorAll('[data-consent]').forEach(function (button) {

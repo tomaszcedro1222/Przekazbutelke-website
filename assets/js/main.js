@@ -6,6 +6,53 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  const receiverFlow = document.querySelector('.receiver-flow');
+  const receiverDots = Array.from(document.querySelectorAll('[data-receiver-slide]'));
+  if (receiverFlow && receiverDots.length) {
+    const receiverScreens = Array.from(receiverFlow.querySelectorAll('.flow-screen'));
+    let scrollFrame;
+
+    const setActiveReceiverDot = (activeIndex) => {
+      receiverDots.forEach((dot, index) => {
+        if (index === activeIndex) dot.setAttribute('aria-current', 'true');
+        else dot.removeAttribute('aria-current');
+      });
+    };
+
+    const updateReceiverDot = () => {
+      const flowCenter = receiverFlow.scrollLeft + receiverFlow.clientWidth / 2;
+      let activeIndex = 0;
+      let smallestDistance = Infinity;
+
+      receiverScreens.forEach((screen, index) => {
+        const screenCenter = screen.offsetLeft + screen.offsetWidth / 2;
+        const distance = Math.abs(screenCenter - flowCenter);
+        if (distance < smallestDistance) {
+          smallestDistance = distance;
+          activeIndex = index;
+        }
+      });
+
+      setActiveReceiverDot(activeIndex);
+    };
+
+    receiverFlow.addEventListener('scroll', () => {
+      window.cancelAnimationFrame(scrollFrame);
+      scrollFrame = window.requestAnimationFrame(updateReceiverDot);
+    }, { passive: true });
+
+    receiverDots.forEach((dot, index) => {
+      dot.addEventListener('click', () => {
+        const screen = receiverScreens[index];
+        const targetLeft = screen.offsetLeft - (receiverFlow.clientWidth - screen.offsetWidth) / 2;
+        receiverFlow.scrollTo({ left: targetLeft, behavior: 'smooth' });
+        setActiveReceiverDot(index);
+      });
+    });
+
+    updateReceiverDot();
+  }
+
   const counter = document.querySelector('[data-bottle-counter]');
   if (!counter) return;
 
