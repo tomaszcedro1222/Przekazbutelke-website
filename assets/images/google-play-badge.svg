@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="270" height="80" viewBox="0 0 270 80" role="img" aria-labelledby="title desc">
+  <title id="title">Pobierz z Google Play</title>
+  <desc id="desc">Przycisk prowadzący do Google Play</desc>
+  <rect x="1" y="1" width="268" height="78" rx="14" fill="#050505" stroke="#a6a6a6" stroke-width="2"/>
+  <g transform="translate(11 0)">
+    <path fill="#34a853" d="M17 14.5c-1.2 1.4-1.8 3.5-1.8 6v39c0 2.5.6 4.6 1.8 6l24-25.5z"/>
+    <path fill="#fbbc04" d="m49.5 49-8.5-9-24 25.5c1.8 2 4.7 2.2 8 .3z"/>
+    <path fill="#4285f4" d="M49.5 31 25 14.2c-3.3-1.9-6.2-1.7-8 .3L41 40z"/>
+    <path fill="#ea4335" d="m49.5 31-8.5 9 8.5 9 11.8-8.1c3.4-2.3 3.4-4.1 0-6.4z"/>
+    <text x="74" y="28" fill="#fff" font-family="Arial, Helvetica, sans-serif" font-size="13">POBIERZ Z</text>
+    <text x="74" y="58" fill="#fff" font-family="Arial, Helvetica, sans-serif" font-size="29" font-weight="500">Google Play</text>
+  </g>
+</svg>
