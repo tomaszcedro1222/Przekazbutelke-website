@@ -238,10 +238,10 @@ h2 { margin: 0; font-size: clamp(36px, 4.5vw, 58px); line-height: 1.04; }
 .cta h2 { max-width: 700px; margin: 8px 0 12px; color: #fff; }
 .cta p { margin: 0; color: #e5f2ff; font-size: 18px; }
 .store-row { display: flex; align-items: center; gap: 10px; flex-shrink: 0; }
-.store-download-badge { display: block; border-radius: 12px; transition: transform .18s ease, filter .18s ease; }
+.store-download-badge { display: block; border-radius: 12px; transition: box-shadow .18s ease; }
 .store-download-badge img { width: auto; height: 56px; }
-.store-download-badge:hover, .store-download-badge:focus-visible { transform: translateY(-3px); filter: drop-shadow(0 10px 17px rgba(4, 48, 101, .28)); outline: none; }
-.store-download-badge:focus-visible { box-shadow: 0 0 0 4px rgba(255,255,255,.42); }
+.store-download-badge:hover, .store-download-badge:focus-visible { box-shadow: 0 10px 20px rgba(4, 48, 101, .28); outline: none; }
+.store-download-badge:focus-visible { box-shadow: 0 0 0 4px rgba(255,255,255,.42), 0 10px 20px rgba(4, 48, 101, .28); }
 
 .footer { padding: 58px 0 28px; background: var(--ink); color: #a9bed2; }
 .footer-grid { display: grid; grid-template-columns: 1.35fr repeat(3, 1fr); gap: 35px; }
